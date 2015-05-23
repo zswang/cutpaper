@@ -1,0 +1,10 @@
+{
+    "name": "cutpager",
+    "private": true,
+    "dependencies": {
+        "zepto": "1.1.6",
+        "jmd5s": "0.0.5",
+        "jcuts": "^0.0.2",
+        "hammerjs": "^2.0.4"
+    }
+}

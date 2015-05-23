@@ -1,0 +1,78 @@
+<!--include file="../processor/processor-uglify.js" export="#uglify" /-->
+<!--include file="../processor/processor-jjencode.js" export="#jjencode" /-->
+<!--include file="../processor/processor-aaencode.js" export="#aaencode" /-->
+<!--include file="../processor/processor-zero.js" export="#zero" /-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <script>
+/*<replace encoding="#uglify">*/
+(function() {
+  var WIDTH = 400;
+  var ratio = screen.width / WIDTH;
+  var meta = '<meta name="viewport" content="width=' + WIDTH + ', initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=no, target-densitydpi=device-dpi, minimal-ui" />';
+  document.write(meta);
+  window.addEventListener('load', function() {
+    document.body.addEventListener('touchstart', function(ev) {
+      ev.preventDefault();
+    }, false);
+
+    document.body.addEventListener('touchmove', function(ev) {
+      ev.preventDefault();
+    }, false);
+
+    var height = document.body.clientHeight;
+    var MIN_HEIGHT = 558;
+    if (height < MIN_HEIGHT) {
+      var container = document.querySelector('.container');
+      if (container) {
+        container.style.webkitTransformOrigin = '50% 0';
+        container.style.webkitTransform = 'translateZ(0) scale(' + (height / MIN_HEIGHT) + ')';
+      }
+    }
+
+  }, false)
+})();
+/*</replace>*/
+  </script>
+  <title>疯狂剪纸-剪出个性</title>
+  <!--replace encoding="concat" css="css/main.css?t={{md5,7}}" img="img" -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="../bower_components/jcuts/jcuts.min.css">
+  <!--/replace-->
+</head>
+<body>
+  <img src="img/logo.jpg" class="share-icon" >
+  <div class="component container">
+    <div class="component game"></div>
+    <ul class="component colors"></ul>
+    <img src="img/logo.jpg" class="component logo">
+    <img src="img/delete.svg" class="component delete">
+    <img src="img/share.png" class="component share">
+    <div class="component title">疯狂剪纸</div>
+    <div class="component preview clockwise"></div>
+  </div>
+  <div class="mask">
+    <h1>processing</h1>
+    <div class="loading"></div>
+  </div>
+</body>
+<!--replace encoding="concat" js="js/main.js?t={{md5,7}}"-->
+<script src="../bower_components/zepto/zepto.min.js"></script>
+<script src="../bower_components/hammerjs/hammer.min.js"></script>
+<script src="../bower_components/jmd5s/jmd5s.min.js"></script>
+<script src="../bower_components/jcuts/jcuts.js"></script>
+<script src="js/main.js"></script>
+<!--/replace-->
+<!--replace>
+<script src="http://tajs.qq.com/stats?sId=45876917"></script>
+</replace-->
+</html>

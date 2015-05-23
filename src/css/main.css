@@ -1,0 +1,93 @@
+/*
+url(../img/back.png)
+url(../img/delete.svg)
+url(../img/logo.jpg)
+url(../img/share.png)
+ */
+
+html, body {
+  padding: 0;
+  overflow: hidden;
+  background-color: #ddd;
+  font-family: STHeiTi, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #e7f0eb;
+  background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDAwJyB2aWV3Qm94PScwIDAgNDAwIDQwMCc+CjxkZWZzPgoJPHBhdHRlcm4gaWQ9J2JsdWVzdHJpcGUnIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIHg9JzAnIHk9JzAnIHdpZHRoPSczMi44JyBoZWlnaHQ9JzY1LjYnIHZpZXdCb3g9JzAgMCA1IDEwJyA+CgkJPHJlY3QgeD0nLTUnIHk9Jy01JyB3aWR0aD0nMTUnIGhlaWdodD0nMjAnIGZpbGw9JyNlN2YwZWInLz4KCQk8bGluZSB4MT0nLTInIHkxPScxJyB4Mj0nNycgeTI9JzEwJyBzdHJva2U9JyNlNmViZTknIHN0cm9rZS13aWR0aD0nMicvPgoJCTxsaW5lIHgxPSctMicgeTE9JzYnIHgyPSc3JyB5Mj0nMTUnIHN0cm9rZT0nI2U2ZWJlOScgc3Ryb2tlLXdpZHRoPScyJy8+CgkJPGxpbmUgeDE9Jy0yJyB5MT0nLTQnIHgyPSc3JyB5Mj0nNScgc3Ryb2tlPScjZTZlYmU5JyBzdHJva2Utd2lkdGg9JzInLz4KCQk8bGluZSB4MT0nNycgeTE9JzEnIHgyPSctMicgeTI9JzEwJyBzdHJva2U9JyNlYmViZWInIHN0cm9rZS13aWR0aD0nMicvPgoJCTxsaW5lIHgxPSc3JyB5MT0nNicgeDI9Jy0yJyB5Mj0nMTUnIHN0cm9rZT0nI2ViZWJlYicgc3Ryb2tlLXdpZHRoPScyJy8+CgkJPGxpbmUgeDE9JzcnIHkxPSctNCcgeDI9Jy0yJyB5Mj0nNScgc3Ryb2tlPScjZWJlYmViJyBzdHJva2Utd2lkdGg9JzInLz4KCTwvcGF0dGVybj4gCgk8ZmlsdGVyIGlkPSdmdXp6JyB4PScwJyB5PScwJz4KCQk8ZmVUdXJidWxlbmNlIHR5cGU9J3R1cmJ1bGVuY2UnIHJlc3VsdD0ndCcgYmFzZUZyZXF1ZW5jeT0nLjIgLjEnIG51bU9jdGF2ZXM9JzInIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCQk8ZmVDb2xvck1hdHJpeCB0eXBlPSdzYXR1cmF0ZScgaW49J3QnIHZhbHVlcz0nMC40Jy8+CgkJPGZlQ29udm9sdmVNYXRyaXggb3JkZXI9JzMsMycga2VybmVsTWF0cml4PScwLC0uMjUsMCwtLjI1LDIsLS4yNSwwLC0uMjUsMCcvPgoJPC9maWx0ZXI+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNibHVlc3RyaXBlKScvPgo8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWx0ZXI9J3VybCgjZnV6eiknIG9wYWNpdHk9JzAuMScvPgo8L3N2Zz4=');
+  width: 400px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h5, article, section, div, p {
+  margin: 0;
+  padding: 0;
+}
+
+.share-icon {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+.logo {
+  left: 100px;
+  top: 12px;
+  width: 46px;
+  height: 46px;
+}
+
+.title {
+  left: 160px;
+  top: 22px;
+  font-size: 26px;
+}
+
+.container .game {
+  width: 400px;
+  height: 645px;
+  top: 28px;
+  left: 0;
+}
+
+.container .preview {
+  /* background: yellow;*/
+  width: 120px;
+  height: 120px;
+  bottom: 20px;
+  left: 18px;
+}
+.container .delete {
+  width: 86px;
+  height: 86px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.container .share {
+  width: 86px;
+  height: 86px;
+  top: -15px;
+  right: 0px;
+}
+
+.colors {
+  list-style: none;
+  left: 10px;
+  bottom: 150px;
+  padding: 0;
+  margin: 0;
+}
+.colors li {
+  width: 40px;
+  height: 40px;
+}

@@ -1,0 +1,40 @@
+.back {
+  width: 42px;
+  height: 42px;
+  left: 5px;
+  top: 13px;
+}
+
+.hearts {
+  width: 52px;
+  height: 52px;
+  right: 65px;
+  top: 15px;
+}
+
+.heart-count {
+  width: 60px;
+  right: 8px;
+  top: 15px;
+  color: red;
+}
+
+.logo {
+  left: 100px;
+  top: 12px;
+  width: 46px;
+  height: 46px;
+}
+
+.title {
+  left: 160px;
+  top: 22px;
+  font-size: 26px;
+}
+
+.share-icon {
+  width: 400px;
+  height: 400px;
+  top: 135px;
+  left: 0;
+}

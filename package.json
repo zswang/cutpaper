@@ -1,0 +1,24 @@
+{
+  "name": "cutpager",
+  "version": "0.1.0",
+  "private": true,
+  "description": "cutpager",
+  "scripts": {
+    "_index": "jdists src/index.html -o release/index.html",
+    "_preview": "jdists src/preview.html -o release/preview.html",
+    "_compare": "jdists src/process.jdists.js",
+    "dist": "npm run _index && npm run _preview && npm run _compare"
+  },
+  "dependencies": {
+    "autoprefixer-core": "^5.1.8",
+    "clean-css": "~3.1.8",
+    "colors": "^1.0.3",
+    "optimist": "^0.6.1",
+    "less": "^2.4.0",
+    "mkdirp": "^0.5.0",
+    "ejs": "^1.0.0",
+    "uglify-js": "^2.4.17",
+    "jdists": "^0.7.7",
+    "svgo": "^0.5.1"
+  }
+}
