@@ -101,5 +101,5 @@ function jjencode(gv, text) {
 * @see http://utf-8.jp/public/jjencode.html
 */
 module.exports = function(e) {
-  return jjencode(e.var || '$', e.content);
+  return jjencode(e.attrs.var || '$', e.content);
 };

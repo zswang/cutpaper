@@ -2,12 +2,13 @@
   "name": "cutpager",
   "version": "0.1.0",
   "private": true,
-  "description": "cutpager",
+  "title": "天天爱剪纸",
+  "description": "天天都有不一样的精彩",
   "scripts": {
     "_index": "jdists src/index.html -o release/index.html",
     "_preview": "jdists src/preview.html -o release/preview.html",
-    "_compare": "jdists src/process.jdists.js",
-    "dist": "npm run _index && npm run _preview && npm run _compare"
+    "_ranking": "jdists src/ranking.html -o release/ranking.html",
+    "dist": "npm run _index && npm run _preview && npm run _ranking"
   },
   "dependencies": {
     "autoprefixer-core": "^5.1.8",

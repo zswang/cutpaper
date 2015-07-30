@@ -32,26 +32,6 @@ h1, h2, h3, h4, h5, h5, article, section, div, p {
   padding: 0;
 }
 
-.share-icon {
-  position: absolute;
-  width: 0;
-  height: 0;
-  z-index: -1;
-}
-
-.logo {
-  left: 100px;
-  top: 12px;
-  width: 46px;
-  height: 46px;
-}
-
-.title {
-  left: 160px;
-  top: 22px;
-  font-size: 26px;
-}
-
 .container .game {
   width: 400px;
   height: 645px;
@@ -61,23 +41,78 @@ h1, h2, h3, h4, h5, h5, article, section, div, p {
 
 .container .preview {
   /* background: yellow;*/
+  pointer-events: none;
   width: 120px;
   height: 120px;
   bottom: 20px;
   left: 18px;
 }
 .container .delete {
-  width: 86px;
-  height: 86px;
-  bottom: 20px;
+  width: 68px;
+  height: 68px;
+  bottom: 40px;
   right: 20px;
 }
+.container .delete-hint {
+  bottom: 20px;
+  right: 36px;
+}
+.container .save {
+  width: 42px;
+  height: 42px;
+  top: 4px;
+  right: 5px;
+}
+.container .save-hint {
+  top: 46px;
+  right: 9px;
+}
 
-.container .share {
-  width: 86px;
-  height: 86px;
-  top: -15px;
-  right: 0px;
+.container .undo {
+  width: 68px;
+  height: 68px;
+  top: 300px;
+  right: 5px;
+}
+.container .undo-hint {
+  top: 355px;
+  right: 25px;
+}
+
+.container .ranking {
+  width: 48px;
+  height: 48px;
+  top: 5px;
+  left: 5px;
+}
+.ranking-hint {
+  top: 45px;
+  left: 5px;
+}
+
+.edges {
+  list-style: none;
+  left: 135px;
+  bottom: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.edges li {
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  border-radius: 7px;
+  background: white;
+  text-align: center;
+  line-height: 40px;
+  font-size: 24px;
+  float: left;
+}
+
+.edges .active {
+  border: rgb(68, 57, 228) 2px solid;
+  box-sizing: border-box;
 }
 
 .colors {
@@ -87,7 +122,36 @@ h1, h2, h3, h4, h5, h5, article, section, div, p {
   padding: 0;
   margin: 0;
 }
+
 .colors li {
   width: 40px;
   height: 40px;
+  margin: 2px;
+  border-radius: 7px;
+}
+
+.colors .active {
+  border: rgb(68, 57, 228) 2px solid;
+  box-sizing: border-box;
+}
+
+.touch {
+  pointer-events: none;
+  display: none;
+  width: 80px;
+  height: 80px;
+  left: 120px;
+  top: 70px;
+  -webkit-animation: touch-hint 1.5s linear infinite;
+}
+
+@-webkit-keyframes touch-hint {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-120px, 100px, 0);
+  }
+
 }

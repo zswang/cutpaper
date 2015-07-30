@@ -23,10 +23,24 @@
   document.write(meta);
   window.addEventListener('load', function() {
     document.body.addEventListener('touchstart', function(ev) {
+      var target = ev.target;
+      while (target) {
+        if (/tab-content/.test(target.className)) {
+          return;
+        }
+        target = target.parentNode;
+      }
       ev.preventDefault();
     }, false);
 
     document.body.addEventListener('touchmove', function(ev) {
+      var target = ev.target;
+      while (target) {
+        if (/tab-content/.test(target.className)) {
+          return;
+        }
+        target = target.parentNode;
+      }
       ev.preventDefault();
     }, false);
 
@@ -51,74 +65,82 @@
   <!--remove-->
   <title>cutpaper development</title>
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="../bower_components/jcuts/jcuts.min.css">
+  <link rel="stylesheet" href="css/ranking.css">
   <!--/remove-->
 
-  <!--replace encoding="#clean-css" export="../release/css/main.css"-->
+  <!--replace encoding="#clean-css" export="../release/css/ranking.css"-->
     <!--include file="css/base.css" /-->
     <!--replace>
     .title {
-        content: "/*<include file="js/main.js" encoding="#xor" key="jhtmls.com" />*/";
+        content: "/*<include file="js/ranking.js" encoding="#xor" key="jhtmls.com" />*/";
     }
     </replace-->
-    <!--include file="css/main.css" /-->
-    <!--include file="../bower_components/jcuts/jcuts.min.css" /-->
+    <!--include file="css/ranking.css" /-->
   <!--/replace-->
 
   <!--replace encoding="template" engine="jhtmls">
-  <link rel="stylesheet" href="css/main.css?#{Math.random().toString(16).slice(2, 5)}">
+  <link rel="stylesheet" href="css/ranking.css?#{Math.random().toString(16).slice(2, 5)}">
   </replace-->
 </head>
 <body>
-  <img src="img/logo.jpg" class="share-icon" >
   <div class="component container">
-    <div class="component game"></div>
-    <ul class="component colors"></ul>
-    <ul class="component edges"></ul>
-    <img src="img/touch.png" class="component touch">
-    <img src="img/ranking.png" class="component ranking">
-    <span class="component ranking-hint">排行榜</span>
-    <img src="img/delete.svg" class="component delete">
-    <span class="component delete-hint">删除</span>
-    <img src="img/save.png" class="component save">
-    <span class="component save-hint">保存</span>
-    <img src="img/undo.png" class="component undo">
-    <span class="component undo-hint">撤销</span>
+    <div class="component preview clockwise"></div>
+    <img src="img/logo.jpg" class="component cut">
+    <span class="component cut-hint">剪一个</span>
+    <img src="img/refresh.png" class="component refresh">
+    <span class="component refresh-hint">刷新</span>
+    <div class="component ranking">
+      <ul class="tabs">
+        <li class="active"><span>最新发布</span></li>
+        <li><span>今日排行</span></li>
+        <li><span>投票最多</span></li>
+      </ul>
+      <div class="tab-content">
+        <div class="active tab-page">
+          <!--remove-->
+          <ul>
+            <li><div class="paper"></div><img src="img/hearts.ico"><span class="heart-count">x 6</span></li>
+            <li><div class="paper"></div><img src="img/hearts.ico"><span class="heart-count">x 6</span></li>
+            <li><div class="paper"></div><img src="img/hearts.ico"><span class="heart-count">x 6</span></li>
+          </ul>
+          <!--/remove-->
+        </div>
+        <div class="tab-page"></div>
+        <div class="tab-page"></div>
+      </div>
+    </div>
     <!--replace encoding="template" engine="jhtmls" data="../package.json">
     <div class="component title">#{title}</div>
     </replace-->
     <!--remove-->
     <div class="component title">title</div>
     <!--/remove-->
-    <div class="component preview clockwise"></div>
   </div>
   <div class="mask">
     <h1>processing</h1>
     <div class="loading"></div>
   </div>
 </body>
+
 <!--remove-->
 <script src="../bower_components/zepto/zepto.min.js"></script>
 <script src="../bower_components/hammerjs/hammer.min.js"></script>
-<script src="../bower_components/jmd5s/jmd5s.min.js"></script>
 <script src="../bower_components/jcuts/jcuts.js"></script>
-<script src="js/main.js"></script>
+<script src="js/ranking.js"></script>
 <!--/remove-->
 
-<!--replace export="../release/js/main.js"
+<!--replace export="../release/js/ranking.js"
     encoding="regex"
     pattern="/\/\/#\s*sourceMappingURL=[\w.]+/"
     replacement=" "
     -->
     <!--include file="../bower_components/zepto/zepto.min.js" /-->
-    <!--include file="../bower_components/hammerjs/hammer.min.js" /-->
     <!--include file="../bower_components/jmd5s/jmd5s.min.js" /-->
+    <!--include file="../bower_components/hammerjs/hammer.min.js" /-->
     <!--include file="../bower_components/jcuts/jcuts.js" encoding="#uglify" /-->
 <!--/replace-->
-
 <!--replace encoding="template" engine="ejs">
-<script src="js/main.js?<%= Math.random().toString(16).slice(2, 7) %>"></script>
+<script src="js/ranking.js?<%= Math.random().toString(16).slice(2, 7) %>"></script>
 </replace-->
 
 <script>

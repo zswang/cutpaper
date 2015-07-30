@@ -1,15 +1,24 @@
-.back {
+.cut {
   width: 42px;
   height: 42px;
-  left: 5px;
+  left: 10px;
   top: 13px;
+}
+
+.cut-hint {
+  left: 5px;
+  top: 55px;
 }
 
 .hearts {
   width: 52px;
   height: 52px;
   right: 65px;
-  top: 15px;
+  top: 5px;
+}
+.hearts-hint {
+  right: 83px;
+  top: 52px;
 }
 
 .heart-count {
@@ -19,22 +28,18 @@
   color: red;
 }
 
-.logo {
-  left: 100px;
-  top: 12px;
-  width: 46px;
-  height: 46px;
-}
-
-.title {
-  left: 160px;
-  top: 22px;
-  font-size: 26px;
-}
-
-.share-icon {
+.preview {
   width: 400px;
   height: 400px;
   top: 135px;
   left: 0;
+}
+
+.ranking {
+  right: 20px;
+  bottom: 40px;
+}
+.ranking-hint {
+  right: 29px;
+  bottom: 38px;
 }

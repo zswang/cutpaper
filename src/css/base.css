@@ -13,7 +13,7 @@ html {
 
 body {
   background-color: #e7f0eb;
-  background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDAwJyB2aWV3Qm94PScwIDAgNDAwIDQwMCc+CjxkZWZzPgoJPHBhdHRlcm4gaWQ9J2JsdWVzdHJpcGUnIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIHg9JzAnIHk9JzAnIHdpZHRoPSczMi44JyBoZWlnaHQ9JzY1LjYnIHZpZXdCb3g9JzAgMCA1IDEwJyA+CgkJPHJlY3QgeD0nLTUnIHk9Jy01JyB3aWR0aD0nMTUnIGhlaWdodD0nMjAnIGZpbGw9JyNlN2YwZWInLz4KCQk8bGluZSB4MT0nLTInIHkxPScxJyB4Mj0nNycgeTI9JzEwJyBzdHJva2U9JyNlNmViZTknIHN0cm9rZS13aWR0aD0nMicvPgoJCTxsaW5lIHgxPSctMicgeTE9JzYnIHgyPSc3JyB5Mj0nMTUnIHN0cm9rZT0nI2U2ZWJlOScgc3Ryb2tlLXdpZHRoPScyJy8+CgkJPGxpbmUgeDE9Jy0yJyB5MT0nLTQnIHgyPSc3JyB5Mj0nNScgc3Ryb2tlPScjZTZlYmU5JyBzdHJva2Utd2lkdGg9JzInLz4KCQk8bGluZSB4MT0nNycgeTE9JzEnIHgyPSctMicgeTI9JzEwJyBzdHJva2U9JyNlYmViZWInIHN0cm9rZS13aWR0aD0nMicvPgoJCTxsaW5lIHgxPSc3JyB5MT0nNicgeDI9Jy0yJyB5Mj0nMTUnIHN0cm9rZT0nI2ViZWJlYicgc3Ryb2tlLXdpZHRoPScyJy8+CgkJPGxpbmUgeDE9JzcnIHkxPSctNCcgeDI9Jy0yJyB5Mj0nNScgc3Ryb2tlPScjZWJlYmViJyBzdHJva2Utd2lkdGg9JzInLz4KCTwvcGF0dGVybj4gCgk8ZmlsdGVyIGlkPSdmdXp6JyB4PScwJyB5PScwJz4KCQk8ZmVUdXJidWxlbmNlIHR5cGU9J3R1cmJ1bGVuY2UnIHJlc3VsdD0ndCcgYmFzZUZyZXF1ZW5jeT0nLjIgLjEnIG51bU9jdGF2ZXM9JzInIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCQk8ZmVDb2xvck1hdHJpeCB0eXBlPSdzYXR1cmF0ZScgaW49J3QnIHZhbHVlcz0nMC40Jy8+CgkJPGZlQ29udm9sdmVNYXRyaXggb3JkZXI9JzMsMycga2VybmVsTWF0cml4PScwLC0uMjUsMCwtLjI1LDIsLS4yNSwwLC0uMjUsMCcvPgoJPC9maWx0ZXI+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNibHVlc3RyaXBlKScvPgo8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWx0ZXI9J3VybCgjZnV6eiknIG9wYWNpdHk9JzAuMScvPgo8L3N2Zz4=');
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDAwJyB2aWV3Qm94PScwIDAgNDAwIDQwMCc+CjxkZWZzPgoJPHBhdHRlcm4gaWQ9J2JsdWVzdHJpcGUnIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIHg9JzAnIHk9JzAnIHdpZHRoPSczMi44JyBoZWlnaHQ9JzY1LjYnIHZpZXdCb3g9JzAgMCA1IDEwJyA+CgkJPHJlY3QgeD0nLTUnIHk9Jy01JyB3aWR0aD0nMTUnIGhlaWdodD0nMjAnIGZpbGw9JyNlN2YwZWInLz4KCQk8bGluZSB4MT0nLTInIHkxPScxJyB4Mj0nNycgeTI9JzEwJyBzdHJva2U9JyNlNmViZTknIHN0cm9rZS13aWR0aD0nMicvPgoJCTxsaW5lIHgxPSctMicgeTE9JzYnIHgyPSc3JyB5Mj0nMTUnIHN0cm9rZT0nI2U2ZWJlOScgc3Ryb2tlLXdpZHRoPScyJy8+CgkJPGxpbmUgeDE9Jy0yJyB5MT0nLTQnIHgyPSc3JyB5Mj0nNScgc3Ryb2tlPScjZTZlYmU5JyBzdHJva2Utd2lkdGg9JzInLz4KCQk8bGluZSB4MT0nNycgeTE9JzEnIHgyPSctMicgeTI9JzEwJyBzdHJva2U9JyNlYmViZWInIHN0cm9rZS13aWR0aD0nMicvPgoJCTxsaW5lIHgxPSc3JyB5MT0nNicgeDI9Jy0yJyB5Mj0nMTUnIHN0cm9rZT0nI2ViZWJlYicgc3Ryb2tlLXdpZHRoPScyJy8+CgkJPGxpbmUgeDE9JzcnIHkxPSctNCcgeDI9Jy0yJyB5Mj0nNScgc3Ryb2tlPScjZWJlYmViJyBzdHJva2Utd2lkdGg9JzInLz4KCTwvcGF0dGVybj4gCgk8ZmlsdGVyIGlkPSdmdXp6JyB4PScwJyB5PScwJz4KCQk8ZmVUdXJidWxlbmNlIHR5cGU9J3R1cmJ1bGVuY2UnIHJlc3VsdD0ndCcgYmFzZUZyZXF1ZW5jeT0nLjIgLjEnIG51bU9jdGF2ZXM9JzInIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCQk8ZmVDb2xvck1hdHJpeCB0eXBlPSdzYXR1cmF0ZScgaW49J3QnIHZhbHVlcz0nMC40Jy8+CgkJPGZlQ29udm9sdmVNYXRyaXggb3JkZXI9JzMsMycga2VybmVsTWF0cml4PScwLC0uMjUsMCwtLjI1LDIsLS4yNSwwLC0uMjUsMCcvPgoJPC9maWx0ZXI+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNibHVlc3RyaXBlKScvPgo8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWx0ZXI9J3VybCgjZnV6eiknIG9wYWNpdHk9JzAuMScvPgo8L3N2Zz4=');
   width: 400px;
   height: 100%;
   margin: 0 auto;
@@ -40,6 +40,27 @@ h1, h2, h3, h4, h5, h5, article, section, div, p {
 
 .component {
   position: absolute;
+}
+
+.logo {
+  left: 85px;
+  top: 12px;
+  width: 46px;
+  height: 46px;
+}
+
+.title {
+  left: 145px;
+  top: 22px;
+  font-size: 26px;
+  pointer-events: none;
+}
+
+.share-icon {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
 }
 
 @-webkit-keyframes clockwise {
@@ -72,20 +93,21 @@ h1, h2, h3, h4, h5, h5, article, section, div, p {
 .mask h1 {
   width: 100%;
   position: absolute;
-  top: calc(50% + 72px);
+  top: 400px;
   left: 0;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 4px;
   font: 300 32px/1 'Open sans condensed', sans-serif;
 }
+
 .loading {
   width: 100px;
   height: 100px;
   position: absolute;
-  top: calc(50% - 50px);
-  left: calc(50% - 50px);
-
+  left: 50%;
+  margin-left: -50px;
+  top: 260px;
   box-sizing: border-box;
   border-top: 8px solid rgb(240,82,0);
   border-right: 8px solid rgba(240,82,0,.3);

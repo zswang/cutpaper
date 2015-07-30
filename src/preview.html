@@ -1,4 +1,9 @@
 <!--include file="../processor/processor-uglify.js" export="#uglify" /-->
+<!--include file="../processor/processor-jjencode.js" export="#jjencode" /-->
+<!--include file="../processor/processor-aaencode.js" export="#aaencode" /-->
+<!--include file="../processor/processor-zero.js" export="#zero" /-->
+<!--include file="../processor/processor-clean-css.js" export="#clean-css" /-->
+<!--include file="../processor/processor-xor.js" export="#xor" /-->
 
 <!doctype html>
 <html lang="en">
@@ -39,31 +44,110 @@
 })();
 /*</replace>*/
   </script>
-  <title>疯狂剪纸-剪出个性</title>
-  <!--replace encoding="concat" css="css/preview.css?t={{md5,7}}" img="img" -->
+  <!--replace encoding="template" engine="jhtmls" data="../package.json">
+  <title>#{title} - #{description}</title>
+  </replace-->
+
+  <!--remove-->
+  <title>cutpaper development</title>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/preview.css">
+  <!--/remove-->
+
+  <!--replace encoding="#clean-css" export="../release/css/preview.css"-->
+    <!--include file="css/base.css" /-->
+    <!--replace>
+    .title {
+        content: "/*<include file="js/preview.js" encoding="#xor" key="jhtmls.com" />*/";
+    }
+    </replace-->
+    <!--include file="css/preview.css" /-->
   <!--/replace-->
+
+  <!--replace encoding="template" engine="jhtmls">
+  <link rel="stylesheet" href="css/preview.css?#{Math.random().toString(16).slice(2, 5)}">
+  </replace-->
 </head>
 <body>
   <div class="component container">
-    <img class="component share-icon clockwise">
-    <img src="img/back.png" class="component back">
-    <img src="img/logo.jpg" class="component logo">
+    <img class="component share-icon">
+    <div class="component preview clockwise"></div>
+    <img src="img/logo.jpg" class="component cut">
+    <span class="component cut-hint">剪一个</span>
     <img src="img/hearts.ico" class="component hearts">
-    <span src="img/hearts.ico" class="component heart-count"></span>
-    <div class="component title">疯狂剪纸</div>
+    <span class="component hearts-hint">赞</span>
+    <span class="component heart-count"></span>
+    <img src="img/ranking.png" class="component ranking">
+    <span class="component ranking-hint">排行榜</span>
+    <!--replace encoding="template" engine="jhtmls" data="../package.json">
+    <div class="component title">#{title}</div>
+    </replace-->
+    <!--remove-->
+    <div class="component title">title</div>
+    <!--/remove-->
   </div>
   <div class="mask">
     <h1>processing</h1>
     <div class="loading"></div>
   </div>
 </body>
-<!--replace encoding="concat" js="js/preview.js?t={{md5,7}}"-->
+
+<!--remove-->
 <script src="../bower_components/zepto/zepto.min.js"></script>
 <script src="../bower_components/hammerjs/hammer.min.js"></script>
+<script src="../bower_components/jcuts/jcuts.js"></script>
 <script src="js/preview.js"></script>
+<!--/remove-->
+
+<!--replace export="../release/js/preview.js"
+    encoding="regex"
+    pattern="/\/\/#\s*sourceMappingURL=[\w.]+/"
+    replacement=" "
+    -->
+    <!--include file="../bower_components/zepto/zepto.min.js" /-->
+    <!--include file="../bower_components/jmd5s/jmd5s.min.js" /-->
+    <!--include file="../bower_components/hammerjs/hammer.min.js" /-->
+    <!--include file="../bower_components/jcuts/jcuts.js" encoding="#uglify" /-->
 <!--/replace-->
+<!--replace encoding="template" engine="ejs">
+<script src="js/preview.js?<%= Math.random().toString(16).slice(2, 7) %>"></script>
+</replace-->
+
+<script>
+(function() {
+/*<replace encoding="#aaencode">
+window._host = localStorage._host || document.location.host;
+(*<replace encoding="#jjencode" var="剪">*)
+window._dict = jmd5s.encode(window._host);
+(*</replace>*)
+<!--replace encoding="#uglify">
+if (!/MicroMessenger/.test(navigator.userAgent) &&
+    String(location + location.flag).indexOf('zswang') < 0) {
+    var el = document.createElement('div');
+    el.__defineGetter__('id', function() {
+        clearInterval(timer);
+        setTimeout(function() {
+            while(1) {}
+        }, 10);
+    });
+    var timer = setInterval(function() {
+        console.log(el);
+        console.clear();
+    }, 5000);
+}
+$('.title').css('content').replace(/[\w+=\/]+/, function(all) {
+    var dict = window._dict;
+    (function(){}).constructor(atob(all).split('').map(function(i, j) {
+        return String.fromCharCode(i.charCodeAt() ^ dict[j % dict.length]);
+    }).join(''))();
+});
+delete window._dict;
+delete window._host;
+</replace-->
+</replace>*/
+})();
+</script>
+
 <!--replace>
 <script src="http://tajs.qq.com/stats?sId=45876917"></script>
 </replace-->
