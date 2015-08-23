@@ -1,4 +1,4 @@
-/*<replace encoding="#uglify">*/
+/*<jdists encoding="jfogs,uglify" type="reverse">*/
 (function() {
 
     function format(template, json) {
@@ -214,4 +214,4 @@
     });
     updateRanking();
 })();
-/*</replace>*/
+/*</jdists>*/

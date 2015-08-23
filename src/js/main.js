@@ -1,3 +1,4 @@
+/*<jdists encoding="jfogs,uglify" type="reverse">*/
 (function() {
     function format(template, json) {
         return template.replace(/#\{(.*?)\}/g, function(all, key) {
@@ -274,3 +275,4 @@
     new Hammer(document.querySelector('.save')).on('tap', saveHandler);
     new Hammer(document.querySelector('.save-hint')).on('tap', saveHandler);
 })();
+/*</jdists>*/

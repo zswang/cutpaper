@@ -1,4 +1,4 @@
-/*<replace encoding="#uglify">*/
+/*<jdists encoding="jfogs,uglify" type="reverse">*/
 (function() {
 
     function format(template, json) {
@@ -155,4 +155,4 @@
         });
     });
 })();
-/*</replace>*/
+/*</jdists>*/

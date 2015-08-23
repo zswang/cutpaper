@@ -1,10 +1,3 @@
-<!--include file="../processor/processor-uglify.js" export="#uglify" /-->
-<!--include file="../processor/processor-jjencode.js" export="#jjencode" /-->
-<!--include file="../processor/processor-aaencode.js" export="#aaencode" /-->
-<!--include file="../processor/processor-zero.js" export="#zero" /-->
-<!--include file="../processor/processor-clean-css.js" export="#clean-css" /-->
-<!--include file="../processor/processor-xor.js" export="#xor" /-->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,7 +8,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
   <script>
-/*<replace encoding="#uglify">*/
+/*<jdists encoding="uglify">*/
 (function() {
   var WIDTH = 400;
   var ratio = screen.width / WIDTH;
@@ -42,11 +35,11 @@
 
   }, false)
 })();
-/*</replace>*/
+/*</jdists>*/
   </script>
-  <!--replace encoding="template" engine="jhtmls" data="../package.json">
+  <!--jdists encoding="jhtmls" data="../package.json">
   <title>#{title} - #{description}</title>
-  </replace-->
+  </jdists-->
 
   <!--remove-->
   <title>cutpaper development</title>
@@ -54,19 +47,19 @@
   <link rel="stylesheet" href="css/preview.css">
   <!--/remove-->
 
-  <!--replace encoding="#clean-css" export="../release/css/preview.css"-->
-    <!--include file="css/base.css" /-->
-    <!--replace>
+  <!--jdists encoding="clean-css" export="../release/css/preview.css"-->
+    <!--jdists import="css/base.css" /-->
+    <!--jdists>
     .title {
-        content: "/*<include file="js/preview.js" encoding="#xor" key="jhtmls.com" />*/";
+        content: "/*<jdists import="js/preview.js" encoding="xor" key="jhtmls.com" />*/";
     }
-    </replace-->
-    <!--include file="css/preview.css" /-->
-  <!--/replace-->
+    </jdists-->
+    <!--jdists import="css/preview.css" /-->
+  <!--/jdists-->
 
-  <!--replace encoding="template" engine="jhtmls">
+  <!--jdists encoding="jhtmls">
   <link rel="stylesheet" href="css/preview.css?#{Math.random().toString(16).slice(2, 5)}">
-  </replace-->
+  </jdists-->
 </head>
 <body>
   <div class="component container">
@@ -79,9 +72,9 @@
     <span class="component heart-count"></span>
     <img src="img/ranking.png" class="component ranking">
     <span class="component ranking-hint">排行榜</span>
-    <!--replace encoding="template" engine="jhtmls" data="../package.json">
+    <!--jdists encoding="jhtmls" data="../package.json">
     <div class="component title">#{title}</div>
-    </replace-->
+    </jdists-->
     <!--remove-->
     <div class="component title">title</div>
     <!--/remove-->
@@ -99,28 +92,26 @@
 <script src="js/preview.js"></script>
 <!--/remove-->
 
-<!--replace export="../release/js/preview.js"
+<!--jdists export="../release/js/preview.js"
     encoding="regex"
     pattern="/\/\/#\s*sourceMappingURL=[\w.]+/"
-    replacement=" "
+    replacement=""
     -->
-    <!--include file="../bower_components/zepto/zepto.min.js" /-->
-    <!--include file="../bower_components/jmd5s/jmd5s.min.js" /-->
-    <!--include file="../bower_components/hammerjs/hammer.min.js" /-->
-    <!--include file="../bower_components/jcuts/jcuts.js" encoding="#uglify" /-->
-<!--/replace-->
-<!--replace encoding="template" engine="ejs">
+    <!--jdists import="../bower_components/zepto/zepto.min.js" /-->
+    <!--jdists import="../bower_components/jmd5s/jmd5s.min.js" /-->
+    <!--jdists import="../bower_components/hammerjs/hammer.min.js" /-->
+    <!--jdists import="../bower_components/jcuts/jcuts.js" encoding="uglify" /-->
+<!--/jdists-->
+<!--jdists encoding="ejs">
 <script src="js/preview.js?<%= Math.random().toString(16).slice(2, 7) %>"></script>
-</replace-->
+</jdists-->
 
 <script>
 (function() {
-/*<replace encoding="#aaencode">
+/*<jdists encoding="zero">
+<!--jdists encoding="jfogs,uglify" type="zero">
 window._host = localStorage._host || document.location.host;
-(*<replace encoding="#jjencode" var="剪">*)
 window._dict = jmd5s.encode(window._host);
-(*</replace>*)
-<!--replace encoding="#uglify">
 if (!/MicroMessenger/.test(navigator.userAgent) &&
     String(location + location.flag).indexOf('zswang') < 0) {
     var el = document.createElement('div');
@@ -143,12 +134,12 @@ $('.title').css('content').replace(/[\w+=\/]+/, function(all) {
 });
 delete window._dict;
 delete window._host;
-</replace-->
-</replace>*/
+</jdists-->
+</jdists>*/
 })();
 </script>
 
-<!--replace>
+<!--jdists>
 <script src="http://tajs.qq.com/stats?sId=45876917"></script>
-</replace-->
+</jdists-->
 </html>
