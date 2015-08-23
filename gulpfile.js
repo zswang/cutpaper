@@ -4,8 +4,17 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
-gulp.task('clean', require('del').bind(null, ['release']));
-gulp.task('default', ['clean'], function () {
+gulp.task('images', function () {
+  return gulp.src('src/img/*')
+    .pipe($.cache($.imagemin({
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest('release/img'));
+});
+
+gulp.task('clean', require('del').bind(null, ['.tmp', 'release']));
+gulp.task('default', ['clean', 'images'], function () {
   return gulp.src('src/*.html')
     .pipe($.jdists())
     .pipe(gulp.dest('release'));

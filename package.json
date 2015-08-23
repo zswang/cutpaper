@@ -16,6 +16,8 @@
     "del": "^0.1.0",
     "gulp": "^3.6.0",
     "gulp-load-plugins": "^0.7.1",
-    "gulp-jdists": "^0.0.4"
+    "gulp-jdists": "^0.0.4",
+    "gulp-cache": "^0.2.2",
+    "gulp-imagemin": "^1.2.1"
   }
 }
